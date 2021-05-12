@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML, CSS and JavaScript for Web Designers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 228px;
+      flex: 0 0 auto;
+      overflow: auto;
+      margin-right: 0.5rem;
+    }
+
+    .main {
+      flex: 1 1 auto;
+      overflow: auto;
+      padding: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a href="#html">
+          HTML
+        </a>
+      </li>
+      <li>
+        <a href="#css">
+          CSS
+        </a>
+      </li>
+      <li>
+        <a href="#javascript">
+          JavaScript
+        </a>
+      </li>
+      <li>
+        <a href="#starting-a-web-server">
+          Starting a web server
+        </a>
+      </li>
+      <li>
+        <a href="#web-components-with-html-css-and-javascript">
+          Web components with HTML, CSS and JavaScript
+        </a>
+      </li>
+      <li>
+        <a href="#ui-framework">
+          UI Framework
+        </a>
+        <ul>
+          <li>
+            <a href="#ui-framework__colors">
+              Colors
+            </a>
+            <ul>
+              <li>
+                <a href="#ui-framework__colors__definition-of-a-css-variable">
+                  Definition of a CSS variable
+                </a>
+              </li>
+              <li>
+                <a href="#ui-framework__color__usage-of-a-css-variable">
+                  Usage of a CSS variable
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#ui-framework__typography">
+              Typography
+            </a>
+          </li>
+          <li>
+            <a href="#ui-framework__components">
+              Components
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#next-steps">
+          Next steps
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <p>
+      This course will try to teach you how to apply the core tools of web development
+      (HTML, CSS, JavaScript) to create web designs.
+    </p>
+
+    <h1 id="html">HTML</h1>
+
+    <p>
+      With HTML you can define the structure.
+    </p>
+
+    <h1 id="css">CSS</h1>
+
+    <p>
+      With CSS you can declare the look of the rendered HTML.
+    </p>
+
+    <h1 id="javascript">JavaScript</h1>
+
+    <p>
+      With JavaScript you can program behavior.
+    </p>
+
+    <h1 id="starting-a-web-server">Starting a web server</h1>
+
+    <pre>
+python3 -m http.server 80
+    </pre>
+
+    <h1 id="web-components-with-html-css-and-javascript">
+      Web components with HTML, CSS and JavaScript
+    </h1>
+
+    <p>
+      Web components can bundle HTML, CSS and JavaScript into one unit.<br>
+      Web components represent a reusable unit.
+    </p>
+
+    <p>
+      <a href="web-components/usage-example.html">Example</a>
+    </p>
+
+    <strong>Further reading:</strong>
+    <ul>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">
+          MDN – Web Components
+        </a>
+      </li>
+    </ul>
+
+    <h1 id="ui-framework">UI Framework</h1>
+
+    <h2 id="ui-framework__colors">Colors</h2>
+
+    Colors can be defined with CSS variables.
+    They can be reused in the whole UI Framework.
+
+    <h3 id="ui-framework__colors__definition-of-a-css-variable">Definition of a CSS variable</h3>
+
+    In <code>/ui-framework/colors/colors.css</code>:<br>
+
+    <pre>
+:host {
+  --primary: blue;
+}
+    </pre>
+
+    <h3 id="ui-framework__color__usage-of-a-css-variable">
+      Usage of a CSS variable
+    </h3>
+
+    In CSS:<br>
+
+    <pre>
+h1 {
+  color: var(--primary);
+}
+    </pre>
+
+    <p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">Further reading</a>
+    </p>
+
+    <h2 id="ui-framework__typography">Typography</h2>
+
+    Typography can be defined with regular CSS classes.
+
+    <p>
+      <strong>
+        <a href="/ui-framework/typography/typography.css" target="_blank">Example of definition of typography CSS classes</a>
+      </strong>
+    </p>
+
+    <p>
+      <strong>
+        <a href="/ui-framework/components/intro-section/IntroSection.js" target="_blank">Example of usage of typography CSS classes</a>
+      </strong>
+    </p>
+
+    In the web component, a link to the <code>typography.css</code> is declared:
+
+    <pre>
+&lt;link rel="stylesheet" href="/ui-framework/typography/typography.css"&gt;
+    </pre>
+
+    <h2 id="ui-framework__components">Components</h2>
+
+    <p>
+      Component can be created with web components.
+    </p>
+
+    <h1 id="next-steps">Next steps</h1>
+
+    <p>
+      The <code>/ui-framework</code> codebase can be used as a starting point
+      for a UI framework.
+    </p>
+  </div>
+</body>
+</html>

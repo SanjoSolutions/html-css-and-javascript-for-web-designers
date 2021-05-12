@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UI Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="colors/colors.css">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 228px;
+      flex: 0 0 auto;
+      overflow: auto;
+      margin-right: 0.5rem;
+    }
+
+    .main {
+      flex: 1 1 auto;
+      overflow: auto;
+    }
+
+    .colors {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .colors > * {
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .typography {
+      margin-bottom: 1rem;
+    }
+
+    .typography-label {
+      display: block;
+    }
+
+    .component {
+      margin-bottom: 1rem;
+    }
+  </style>
+  <script type="module">
+    import { Box } from './components/box/box.js'
+    import { Color } from './components/color/Color.js'
+    import { IntroSection } from './components/intro-section/IntroSection.js'
+
+    customElements.define('c-box', Box)
+    customElements.define('c-color', Color)
+    customElements.define('c-intro-section', IntroSection)
+  </script>
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a href="#colors">
+          Colors
+        </a>
+        <ul>
+          <li>
+            <a href="#colors__primary">
+              primary
+            </a>
+          </li>
+          <li>
+            <a href="#colors__secondary">
+              secondary
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#typography">
+          Typography
+        </a>
+        <ul>
+          <li>
+            <a href="#typography__h1">
+              h1
+            </a>
+          </li>
+          <li>
+            <a href="#typography__h2">
+              h2
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#components">
+          Components
+        </a>
+        <ul>
+          <li>
+            <a href="#components__intro-box">
+              IntroBox
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h2 id="colors">Colors</h2>
+
+    <div class="colors">
+      <c-color id="colors__primary" color="var(--primary)"></c-color>
+      <c-color id="colors__secondary" color="var(--secondary)"></c-color>
+    </div>
+
+    <h2 id="typography">Typography</h2>
+
+    <div id="typography__h1" class="typography">
+      <c-box>
+        <div class="typography-label">h1</div>
+        <h1>h1</h1>
+      </c-box>
+    </div>
+
+    <div id="typography__h2" class="typography">
+      <c-box>
+        <div class="typography-label">h2</div>
+        <h2>h2</h2>
+      </c-box>
+    </div>
+
+    <h2 id="components">Components</h2>
+
+    <div id="components__intro-box" class="component">
+      <c-box>
+        <c-intro-section
+          title="Intro section"
+          imageUrl="cat"
+          paragraphText="Some text"
+        />
+      </c-box>
+    </div>
+  </div>
+</body>
+</html>
