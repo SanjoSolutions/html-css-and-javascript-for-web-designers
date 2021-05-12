@@ -25,6 +25,10 @@
       padding: 0.5rem 0;
     }
 
+    .main__inner {
+      max-width: 32rem;
+    }
+
     .title {
       font-size: 2.5rem;
       margin-top: 0;
@@ -102,128 +106,125 @@
   </div>
 
   <div class="main">
-    <h1 class="title">
-      HTML, CSS and JavaScript for Web Designers
-    </h1>
+    <div class="main__inner">
+      <h1 class="title">
+        HTML, CSS and JavaScript for Web&nbsp;Designers
+      </h1>
 
-    <p>
-      This course will try to teach you how to apply the core tools of web development
-      (HTML, CSS, JavaScript) to create web designs.
-    </p>
+      <p>
+        This course will try to teach you how to apply the core tools of web&nbsp;development
+        (HTML, CSS, JavaScript) to create web&nbsp;designs.
+      </p>
 
-    <h1 id="html">HTML</h1>
+      <h1 id="html">HTML</h1>
 
-    <p>
-      With HTML you can define the structure.
-    </p>
+      <p>
+        With HTML you can define the structure.
+      </p>
 
-    <h1 id="css">CSS</h1>
+      <h1 id="css">CSS</h1>
 
-    <p>
-      With CSS you can declare the look of the rendered HTML.
-    </p>
+      <p>
+        With CSS you can declare the look of the rendered HTML.
+      </p>
 
-    <h1 id="javascript">JavaScript</h1>
+      <h1 id="javascript">JavaScript</h1>
 
-    <p>
-      With JavaScript you can program behavior.
-    </p>
+      <p>
+        With JavaScript you can program behavior.
+      </p>
 
-    <h1 id="starting-a-web-server">Starting a web server</h1>
+      <h1 id="starting-a-web-server">Starting a web&nbsp;server</h1>
 
-    <pre>
-python3 -m http.server 80
-    </pre>
+      <pre>python3 -m http.server 80</pre>
 
-    <h1 id="web-components-with-html-css-and-javascript">
-      Web components with HTML, CSS and JavaScript
-    </h1>
+      <h1 id="web-components-with-html-css-and-javascript">
+        Web&nbsp;components with HTML, CSS and JavaScript
+      </h1>
 
-    <p>
-      Web components can bundle HTML, CSS and JavaScript into one unit.<br>
-      Web components represent a reusable unit.
-    </p>
+      <p>
+        Web&nbsp;components can bundle HTML, CSS and JavaScript into one unit.<br>
+        Web&nbsp;components represent a reusable unit.
+      </p>
 
-    <p>
-      <a href="web-components/usage-example.html">Example</a>
-    </p>
+      <p>
+        <a href="web-components/usage-example.html">Example</a>
+      </p>
 
-    <strong>Further reading:</strong>
-    <ul>
-      <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">
-          MDN – Web Components
-        </a>
-      </li>
-    </ul>
+      <strong>Further reading:</strong>
+      <ul>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">
+            MDN – Web&nbsp;Components
+          </a>
+        </li>
+      </ul>
 
-    <h1 id="ui-framework">UI Framework</h1>
+      <h1 id="ui-framework">UI&nbsp;Framework</h1>
 
-    <h2 id="ui-framework__colors">Colors</h2>
+      <h2 id="ui-framework__colors">Colors</h2>
 
-    Colors can be defined with CSS variables.
-    They can be reused in the whole UI Framework.
+      Colors can be defined with CSS variables.<br>
+      They can be reused in the whole UI&nbsp;Framework.
 
-    <h3 id="ui-framework__colors__definition-of-a-css-variable">Definition of a CSS variable</h3>
+      <h3 id="ui-framework__colors__definition-of-a-css-variable">Definition of a CSS&nbsp;variable</h3>
 
-    In <code>/ui-framework/colors/colors.css</code>:<br>
+      In <code>/ui-framework/colors/colors.css</code>:<br>
 
-    <pre>
-:host {
-  --primary: blue;
-}
-    </pre>
+      <pre>:host {
+    --primary: blue;
+  }</pre>
 
-    <h3 id="ui-framework__color__usage-of-a-css-variable">
-      Usage of a CSS variable
-    </h3>
+      <h3 id="ui-framework__color__usage-of-a-css-variable">
+        Usage of a CSS&nbsp;variable
+      </h3>
 
-    In CSS:<br>
+      In CSS:<br>
 
-    <pre>
-h1 {
-  color: var(--primary);
-}
-    </pre>
+      <pre>h1 {
+    color: var(--primary);
+  }</pre>
 
-    <p>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">Further reading</a>
-    </p>
+      <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">Further reading</a>
+      </p>
 
-    <h2 id="ui-framework__typography">Typography</h2>
+      <h2 id="ui-framework__typography">Typography</h2>
 
-    Typography can be defined with regular CSS classes.
+      Typography can be defined with regular CSS classes.
 
-    <p>
-      <strong>
-        <a href="ui-framework/typography/typography.css" target="_blank">Example of definition of typography CSS classes</a>
-      </strong>
-    </p>
+      <p>
+        <strong>
+          <a href="ui-framework/typography/typography.css" target="_blank">Example of definition of typography&nbsp;CSS&nbsp;classes</a>
+        </strong>
+      </p>
 
-    <p>
-      <strong>
-        <a href="ui-framework/components/intro-section/IntroSection.js" target="_blank">Example of usage of typography CSS classes</a>
-      </strong>
-    </p>
+      <p>
+        <strong>
+          <a href="ui-framework/components/intro-section/IntroSection.js" target="_blank">Example of usage of typography&nbsp;CSS&nbsp;classes</a>
+        </strong>
+      </p>
 
-    In the web component, a link to the <code>typography.css</code> is declared:
+      In the web&nbsp;component, a link to the <code>typography.css</code> is declared:
 
-    <pre>
-&lt;link rel="stylesheet" href="/ui-framework/typography/typography.css"&gt;
-    </pre>
+      <pre>&lt;link
+    rel="stylesheet"
+    href="/ui-framework/typography/typography.css"
+  &gt;</pre>
 
-    <h2 id="ui-framework__components">Components</h2>
+      <h2 id="ui-framework__components">Components</h2>
 
-    <p>
-      Component can be created with web components.
-    </p>
+      <p>
+        Component can be created with web&nbsp;components.
+      </p>
 
-    <h1 id="next-steps">Next steps</h1>
+      <h1 id="next-steps">Next steps</h1>
 
-    <p>
-      The <code>/ui-framework</code> <a href="https://github.com/SanjoSolutions/html-css-and-javascript-for-web-designers" target="_blank">codebase</a> can be used as a starting point
-      for a UI framework.
-    </p>
+      <p>
+        The <code>/ui-framework</code> <a href="https://github.com/SanjoSolutions/html-css-and-javascript-for-web-designers" target="_blank">codebase</a> can be used as a starting&nbsp;point
+        for a UI&nbsp;framework.
+      </p>
+    </div>
   </div>
 </body>
 </html>
