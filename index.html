@@ -34,9 +34,23 @@
       margin-top: 0;
     }
 
+    pre {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .visible-desktop {
+      display: block;
+    }
+
+    .visible-mobile {
+      display: none;
+    }
+
     @media (max-width: 767.9999999px) {
       body {
         flex-direction: column;
+        padding: 0.5rem;
       }
 
       .sidebar {
@@ -45,13 +59,24 @@
 
       .main {
         overflow: initial;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-bottom: 0;
+      }
+
+      .visible-desktop {
+        display: none;
+      }
+
+      .visible-mobile {
+        display: block;
       }
     }
   </style>
 </head>
 <body>
+  <h1 class="title visible-mobile">
+    HTML, CSS and JavaScript for Web&nbsp;Designers
+  </h1>
+
   <div class="sidebar">
     <ul>
       <li>
@@ -123,7 +148,7 @@
 
   <div class="main">
     <div class="main__inner">
-      <h1 class="title">
+      <h1 class="title visible-desktop">
         HTML, CSS and JavaScript for Web&nbsp;Designers
       </h1>
 
