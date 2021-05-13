@@ -1,8 +1,9 @@
 import { createTemplate } from '../../helpers/createTemplate.js'
+import { relativeToModule } from "../../helpers/relativeToModule.js";
 
 const template = createTemplate(`
   <template>
-    <link rel="stylesheet" href="/ui-framework/typography/typography.css">
+    <link rel="stylesheet" href="${relativeToModule(import.meta.url, '../../typography/typography.css')}">
     <style>
       :host {
         display: block;
