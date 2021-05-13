@@ -2,7 +2,6 @@ import { createTemplate } from '../../helpers/createTemplate.js'
 
 const template = createTemplate(`
   <template>
-    <link rel="stylesheet" href="/ui-framework/typography/typography.css">
     <style>
       :host {
         display: inline-block;
