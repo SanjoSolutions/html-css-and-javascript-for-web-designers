@@ -17,7 +17,7 @@ export class CustomWebComponent extends HTMLElement {
   constructor() {
     super()
     const templateContent = template.content
-    const shadowRoot = this.attachShadow({mode: 'closed'})
-    shadowRoot.appendChild(templateContent.cloneNode(true))
+    this._shadowRoot = this.attachShadow({mode: 'closed'})
+    this._shadowRoot.appendChild(templateContent.cloneNode(true))
   }
 }
