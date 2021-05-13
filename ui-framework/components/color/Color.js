@@ -13,6 +13,7 @@ const template = createTemplate(`
       }
     </style>
     <div class="color"></div>
+    <c-toast>Color copied</c-toast>
   </template>
 `)
 
@@ -50,5 +51,8 @@ export class Color extends HTMLElement {
 
   async copyColor() {
     await navigator.clipboard.writeText(this.color)
+    const toast = this._shadowRoot.querySelector('c-toast')
+    toast.show()
+    setTimeout(() => toast.hide(), 2000)
   }
 }

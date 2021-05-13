@@ -41,8 +41,17 @@
       margin-bottom: 1rem;
     }
 
-    .typography-label {
+    .typography-label,
+    .component-label {
       display: block;
+      font-weight: 600;
+      padding-bottom: 0.5rem;
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      border-bottom: 1px solid black;
+      margin-bottom: 0.5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
 
     .component {
@@ -53,10 +62,12 @@
     import { Box } from './components/box/box.js'
     import { Color } from './components/color/Color.js'
     import { IntroSection } from './components/intro-section/IntroSection.js'
+    import { Toast } from './components/toast/Toast.js'
 
     customElements.define('c-box', Box)
     customElements.define('c-color', Color)
     customElements.define('c-intro-section', IntroSection)
+    customElements.define('c-toast', Toast)
   </script>
 </head>
 <body>
@@ -106,6 +117,11 @@
               IntroBox
             </a>
           </li>
+          <li>
+            <a href="#components__toast">
+              Toast
+            </a>
+          </li>
         </ul>
       </li>
     </ul>
@@ -139,11 +155,36 @@
 
     <div id="components__intro-box" class="component">
       <c-box>
+        <div class="component-label">Intro Box</div>
         <c-intro-section
           title="Intro section"
           imageUrl="cat"
           paragraphText="Some text"
         />
+      </c-box>
+    </div>
+
+    <div id="components__toast" class="component">
+      <c-box>
+        <div class="component-label">Toast</div>
+        <c-toast>
+          Message
+        </c-toast>
+        <button id="show-toast">Show</button>
+        <button id="hide-toast">Hide</button>
+        <script>
+          const toast = document.querySelector('c-toast')
+
+          const showToast = document.querySelector('#show-toast')
+          showToast.addEventListener('click', function () {
+            toast.show()
+          })
+
+          const hideToast = document.querySelector('#hide-toast')
+          hideToast.addEventListener('click', function () {
+            toast.hide()
+          })
+        </script>
       </c-box>
     </div>
   </div>
